@@ -1,0 +1,13 @@
+.task{
+    border: 1px solid rgb(115, 76, 76);
+    border-radius: 5px; 
+    padding: 10px;
+    margin: 5px;
+    overflow: hidden;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.dragged {
+    box-shadow: 0 0 10px rgba(129, 64, 64, 0.5); 
+}
