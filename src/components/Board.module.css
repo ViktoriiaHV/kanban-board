@@ -21,7 +21,8 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-around;
-  gap: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
   padding: 10px;
 }
 

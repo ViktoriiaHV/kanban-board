@@ -5,9 +5,9 @@
     width: 100%;
     min-width: 150px;
     max-width: 150px;
-    border-radius: 10px;
-    background-color: cornsilk;
-    padding: 1rem;
+    /* border-radius: 10px; */
+    /* background-color: cornsilk;
+    padding: 1rem; */
 }
 
 .onHoveredOver {

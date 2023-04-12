@@ -13,6 +13,7 @@ export function Stage({ name }: StageProps) {
   const tasks = useStageTasks(name);
   const updateStage = useUpdateTaskStage();
   const [isHoveredOver, setIsHoveredOver] = useState(false);
+  
 
   const isHoveredStyle = isHoveredOver ? classes.onHoveredOver : "";
 
@@ -45,7 +46,7 @@ export function Stage({ name }: StageProps) {
       onDrop={onDrop}
     >
       {tasks.map((task) => (
-        <Task key={task.id} task={task} />
+          <Task key={task.id} task={task}/>
       ))}
     </div>
   );

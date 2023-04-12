@@ -12,6 +12,9 @@ export function HeaderForm() {
 
   const onAddNewTask = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if(taskTitle.trim() === ''){
+      return
+    }
     addNewTask({
       id: Date.now().toString(),
       title: taskTitle,
