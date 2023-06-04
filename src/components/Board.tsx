@@ -1,6 +1,5 @@
 import { Stage } from "./Stage";
 
-import classes from "./Board.module.css";
 
 interface Props {
   stages: string[];
@@ -8,14 +7,14 @@ interface Props {
 
 export function Board({ stages }: Props) {
   return (
-    <div className={classes.board}>
-      <div className={classes.boardHeader}>
+    <div className=''>
+      <div className=''>
         <h2>Board</h2>
       </div>
-      <div className={classes.stagesWrap}>
+      <div className=''>
         {stages.map((stage) => (
-          <div key={stage} className={classes.stageColumn}>
-            <div className={classes.header}>
+          <div key={stage} className=''>
+            <div className=''>
               <header>{stage}</header>
             </div>
             <Stage key={stage} name={stage} />

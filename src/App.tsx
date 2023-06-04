@@ -1,4 +1,3 @@
-import "./App.css";
 import { Board } from "./components/Board";
 import { Layout } from "./Layout/Layout";
 import { TasksState } from "./store/Tasks/TasksState";

@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout__main {
+  flex: 1;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.layout__header {
+  flex: 0;
+  background-color: #35635b;
+}
