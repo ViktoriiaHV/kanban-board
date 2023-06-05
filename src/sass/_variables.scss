@@ -1,8 +1,15 @@
 /* COLOURS */
 
-$base-color: #E5F1E3;
-$primary-color: #35635B;
-$secondary-color: #A3CD9E;
-$tertiary-color: #529471;
+$color-base: #E5F1E3;
+$color-primary: #529471;
+$color-primary-dark: #35635B;
+$color-primary-light: #A3CD9E;
 
-$very-dark-grey-color: #1c1c1c;
+$color-secondary: #FEBE8C;
+$color-secondary-light: #f3efd9;
+
+$color-white: #FFF;
+$color-very-dark-grey: #1c1c1c;
+
+$shadow-dark-grey: 0 13px 15px rgba(0, 0, 0, 0.2);
+$shadow-dark-grey-pressed: 0 8px 5px rgba(0, 0, 0, 0.2);

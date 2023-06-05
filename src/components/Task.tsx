@@ -3,7 +3,6 @@ import { Task as TaskModel } from "../store/Tasks/Task";
 import { useRemoveTask } from "../store/Tasks/useRemoveTask";
 import { useUpdateTaskStage } from "../store/Tasks/useUpdateTaskStage";
 import { ReactComponent as DeleteIcon } from "../icons/icons8-delete.svg";
-import classes from "./Task.module.css";
 
 interface TaskProps {
   task: TaskModel;
@@ -14,8 +13,6 @@ export function Task({ task }: TaskProps) {
   const updateStage = useUpdateTaskStage();
 
   const [isDragged, setIsDragged] = useState(false);
-
-  const isDraggedStyle = isDragged ? classes.dragged : "";
 
   const onDeleteTask = useCallback(() => {
     removeTask(task.id);
@@ -39,31 +36,30 @@ export function Task({ task }: TaskProps) {
     updateStage(task.id, stage);
   };
 
-  const isDoneStyle = task.stage === 'DONE' ? classes.striked : '';
-
   return (
     <div
       draggable
-      className={`${classes.task} ${isDraggedStyle}`}
+      className={`stage-task ${isDragged ? "stage-task--dragged" : ""}`}
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <div>
-        <div className={`${classes.title} ${isDoneStyle}`}>{task.title}</div>
-        <div className={classes.description}>{task.description}</div>
-      </div>
-      {
-        <div className={classes.stages}>
-          <label>Stage</label>
-          <select onChange={onStageChangeHandler} value={task.stage}>
-            <option value="TO DO">TO DO</option>
-            <option value="IN PROGRESS">IN PROGRESS</option>
-            <option value="IN REVIEW">IN REVIEW</option>
-            <option value="DONE">DONE</option>
-          </select>
-        </div>
-      }
-      <div className={classes.buttons}>
+      <h4
+        className={`stage-task__title ${
+          task.stage === "DONE" ? "stage-task__title--striked" : ""
+        }`}
+      >
+        {task.title}
+      </h4>
+      <span>
+        <label className="stage-task__label">Stage</label>
+        <select onChange={onStageChangeHandler} value={task.stage}>
+          <option value="TO DO">TO DO</option>
+          <option value="IN PROGRESS">IN PROGRESS</option>
+          <option value="IN REVIEW">IN REVIEW</option>
+          <option value="DONE">DONE</option>
+        </select>
+      </span>
+      <div className="stage-task__action-buttons">
         <DeleteIcon onClick={onDeleteTask} />
       </div>
     </div>

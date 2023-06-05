@@ -1,8 +1,7 @@
 import { Task } from "./Task";
 
-import classes from "./Stage.module.css";
 import { useStageTasks } from "../store/Tasks/useStageTasks";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useUpdateTaskStage } from "../store/Tasks/useUpdateTaskStage";
 
 interface StageProps {
@@ -14,9 +13,6 @@ export function Stage({ name }: StageProps) {
   const updateStage = useUpdateTaskStage();
   const [isHoveredOver, setIsHoveredOver] = useState(false);
   
-
-  const isHoveredStyle = isHoveredOver ? classes.onHoveredOver : "";
-
   const onDragLeave = useCallback((e: React.DragEvent<Element>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -40,7 +36,7 @@ export function Stage({ name }: StageProps) {
 
   return (
     <div
-      className={`${classes.stage} ${isHoveredStyle}`}
+      className={`stage ${isHoveredOver ? 'stage--hovered': ''}`}
       onDragLeave={onDragLeave}
       onDragOver={onDragOver}
       onDrop={onDrop}
