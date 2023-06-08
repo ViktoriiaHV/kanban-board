@@ -27,6 +27,30 @@ const DUMMY_TASKS = [
       stage: "TO DO"
     },
     {
+      id: '5',
+      title: "Test5",
+      description: "Test description 5",
+      stage: "TO DO"
+    },
+    {
+      id: '6',
+      title: "Test5",
+      description: "Test description 5",
+      stage: "TO DO"
+    },
+    {
+      id: '7',
+      title: "Test5",
+      description: "Test description 5",
+      stage: "TO DO"
+    },
+    {
+      id: '8',
+      title: "Test5",
+      description: "Test description 5",
+      stage: "TO DO"
+    },
+    {
       id: '4',
       title: "Test4",
       description: "Test description",
