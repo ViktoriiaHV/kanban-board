@@ -4,7 +4,7 @@ interface ButtonProps
     HTMLButtonElement
   > {
   children: JSX.Element | string;
-  color?: string;
+  color?: 'primary' | 'secondary' ;
   size?: "large" | "medium" | "small";
 }
 

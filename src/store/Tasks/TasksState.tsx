@@ -1,5 +1,4 @@
 import { useMemo, useReducer } from "react";
-import { Task } from "./Task";
 import { tasksReducer } from "./TaskReducer";
 import { TasksContext } from "./TasksContext";
 
@@ -24,30 +23,6 @@ const DUMMY_TASKS = [
       id: '3',
       title: "Test3",
       description: "Test description",
-      stage: "TO DO"
-    },
-    {
-      id: '5',
-      title: "Test5",
-      description: "Test description 5",
-      stage: "TO DO"
-    },
-    {
-      id: '6',
-      title: "Test5",
-      description: "Test description 5",
-      stage: "TO DO"
-    },
-    {
-      id: '7',
-      title: "Test5",
-      description: "Test description 5",
-      stage: "TO DO"
-    },
-    {
-      id: '8',
-      title: "Test5",
-      description: "Test description 5",
       stage: "TO DO"
     },
     {
