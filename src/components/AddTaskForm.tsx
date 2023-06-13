@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
-import { useAddNewTask } from "../../store/Tasks/useAddNewTask";
-import { Button } from "../../layout/Button";
-import { ModalContext } from "../../store/Tasks/modal/ModalContext";
+import { useAddNewTask } from "../store/Tasks/useAddNewTask";
+import { Button } from "../layout/Button";
+import { ModalContext } from "../store/modal/ModalContext";
 
-export function HeaderForm() {
+export function AddTaskForm() {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
 

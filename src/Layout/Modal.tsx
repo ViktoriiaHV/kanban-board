@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ModalContext } from "../store/Tasks/modal/ModalContext";
+import { ModalContext } from "../store/modal/ModalContext";
 import { Button } from "./Button";
 import { useMountTransition } from "./hooks/useMountTransition";
 

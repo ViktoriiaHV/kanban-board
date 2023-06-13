@@ -1,24 +1,5 @@
 @import "variables";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 5rem;
-  min-height: 5rem;
-
-  &__logo {
-    display: inline-flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  &__icon {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-
 .btn {
   text-align: center;
   text-transform: uppercase;

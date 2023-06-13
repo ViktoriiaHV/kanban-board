@@ -1,10 +1,8 @@
+import { useStages } from "../store/stages/useStages";
 import { Stage } from "./Stage";
 
-interface Props {
-  stages: string[];
-}
-
-export function Board({ stages }: Props) {
+export function Board() {
+  const stages = useStages();
   return (
     <div className="board">
       <div className="board__columns">

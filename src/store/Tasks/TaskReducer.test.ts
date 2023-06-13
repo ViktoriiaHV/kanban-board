@@ -1,4 +1,3 @@
-import { TaskAction } from "./TaskAction";
 import { tasksReducer } from "./TaskReducer";
 import { createTask } from "./__tests__/tasks.fixtures";
 

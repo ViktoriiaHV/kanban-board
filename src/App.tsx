@@ -1,21 +1,22 @@
-import React from "react";
 import { Board } from "./components/Board";
 import { Layout } from "./layout/Layout";
 import { Modal } from "./layout/Modal";
-import { ModalState } from "./store/Tasks/modal/ModalState";
+import { ModalState } from "./store/modal/ModalState";
 import { TasksState } from "./store/Tasks/TasksState";
+import { StagesState } from "./store/stages/StagesState";
 
 function App() {
-  const stages = ["TO DO", "IN PROGRESS", "IN REVIEW", "DONE"];
   return (
     <div className="App">
       <ModalState>
-        <TasksState>
-          <Modal />
-          <Layout>
-            <Board stages={stages} />
-          </Layout>
-        </TasksState>
+        <StagesState>
+          <TasksState>
+            <Modal />
+            <Layout>
+              <Board />
+            </Layout>
+          </TasksState>
+        </StagesState>
       </ModalState>
     </div>
   );
