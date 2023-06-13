@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useAddNewTask } from "../../store/Tasks/useAddNewTask";
-import { Button } from "../../Layout/Button";
+import { Button } from "../../layout/Button";
+import { ModalContext } from "../../store/Tasks/modal/ModalContext";
 
 export function HeaderForm() {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
 
+  const { setIsOpen } = useContext(ModalContext);
 
   const addNewTask = useAddNewTask();
 
@@ -22,6 +24,7 @@ export function HeaderForm() {
     });
     setTaskTitle("");
     setTaskDescription("");
+    setIsOpen(false);
   };
 
   return (
@@ -42,7 +45,12 @@ export function HeaderForm() {
           onChange={(e) => setTaskDescription(e.target.value)}
           value={taskDescription}
         />
-        <Button type="submit" size="medium" color="secondary" onClick={onAddNewTask}>
+        <Button
+          type="submit"
+          size="medium"
+          color="secondary"
+          onClick={onAddNewTask}
+        >
           Add
         </Button>
       </form>

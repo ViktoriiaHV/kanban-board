@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button } from "../../Layout/Button";
+import { Button } from "../../layout/Button";
 import boardIcon from "../../icons/pending-tasks.png";
 import { ModalContext } from "../../store/Tasks/modal/ModalContext";
 import { HeaderForm } from "./HeaderForm";

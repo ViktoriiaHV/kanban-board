@@ -1,7 +1,7 @@
 import React from "react";
 import { Board } from "./components/Board";
-import { Layout } from "./Layout/Layout";
-import { Modal } from "./Layout/Modal";
+import { Layout } from "./layout/Layout";
+import { Modal } from "./layout/Modal";
 import { ModalState } from "./store/Tasks/modal/ModalState";
 import { TasksState } from "./store/Tasks/TasksState";
 
