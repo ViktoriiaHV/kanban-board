@@ -37,6 +37,7 @@ export function AddTaskForm() {
           placeholder="Task Name"
           onChange={(e) => setTaskTitle(e.target.value)}
           value={taskTitle}
+          autoFocus
         />
         <input
           className="header-form__input"
